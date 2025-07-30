@@ -1,0 +1,33 @@
+body {
+  background-color: #555555;
+}
+nav {
+  background-color: #443355;
+  grid-area: nav;
+}
+main {
+  background-color: #555555;
+  grid-area: main;
+}
+aside {
+  background-color: #333;
+  grid-area: aside;
+}
+header {
+  background-color: green;
+  grid-area: header;
+}
+footer {
+  background-color: orange;
+  grid-area: footer;
+  display: none;
+}
+.grid-container {
+  display: grid;
+  gap: 0;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside";
+}
