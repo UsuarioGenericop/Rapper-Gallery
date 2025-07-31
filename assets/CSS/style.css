@@ -31,3 +31,23 @@ footer {
     "main"
     "aside";
 }
+.pictures {
+  display: grid;
+  grid-template:
+    "auto auto"
+    "auto auto";
+  gap: 10px;
+  margin: 10px;
+}
+.rapper {
+  border-radius: 5%;
+  width: 45vw;
+  height: auto;
+  align-self: flex-start;
+}
+.rapper:hover {
+  transform: scale(1.02);
+}
+.flex {
+  display: flex;
+}
