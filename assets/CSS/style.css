@@ -32,38 +32,26 @@ footer {
     "aside";
 }
 .pictures {
-  display: grid;
-  grid-template:
-    "auto auto"
-    "auto auto";
-  gap: 10px;
-  margin: 10px;
+  max-width: 100%;
+
+  column-count: 2;
+  font-family: arial;
+  margin-top: 10px;
 }
 .rapper {
-  border-radius: 5%;
-  width: 45vw;
-  height: auto;
-  align-self: flex-start;
+  break-inside: avoid;
+  margin-bottom: 16px;
 }
 .rapper:hover {
   transform: scale(1.02);
 }
-.flex {
-  display: flex;
-}
-/* .gallery {
-  max-width: 1200px;
-  margin: 0 auto;
-  column-count: 4;
-  font-family: arial;
-}
-.gallery-item {
-  break-inside: avoid;
-  margin-bottom: 16px;
-}
-.gallery-item figure {
+.rapper figure {
   margin: 0;
   position: relative;
+}
+.rapper img {
+  width: 100%;
+  border-radius: 14px;
 }
 .gallery-item figcaption {
   font-style: italic;
@@ -80,7 +68,3 @@ footer {
   white-space: nowrap;
   border-radius: 0 0 14px 14px;
 }
-.gallery-item img {
-  width: 100%;
-  border-radius: 14px;
- */
