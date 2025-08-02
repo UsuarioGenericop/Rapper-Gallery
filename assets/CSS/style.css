@@ -6,7 +6,7 @@ nav {
   grid-area: nav;
 }
 main {
-  background-color: #555555;
+  background-color: black;
   grid-area: main;
 }
 aside {
@@ -33,7 +33,6 @@ footer {
 }
 .pictures {
   max-width: 100%;
-
   column-count: 2;
   font-family: arial;
   margin-top: 10px;
@@ -42,16 +41,52 @@ footer {
   break-inside: avoid;
   margin-bottom: 16px;
 }
-.rapper:hover {
-  transform: scale(1.02);
+.rapper:hover figure {
+  transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  filter: invert();
 }
 .rapper figure {
   margin: 0;
   position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 .rapper img {
   width: 100%;
   border-radius: 14px;
+}
+.rapper audio {
+  border-radius: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 3px;
+  height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 0 0 14px 14px;
+  position: absolute;
+  left: 0;
 }
 @media (min-width: 768px) {
   .pictures {
