@@ -127,7 +127,7 @@ footer {
   .grid-container {
     display: grid;
     gap: 0;
-    grid-template-columns: auto 95%;
+    grid-template-columns: auto 96%;
     grid-template-areas:
       "aside header"
       "aside nav"
@@ -149,7 +149,7 @@ footer {
     flex-direction: column;
     display: flex;
     top: 0;
-    max-width: 5%;
+    max-width: 4%;
     align-items: center;
     justify-content: start;
     border-right: solid 1px;
