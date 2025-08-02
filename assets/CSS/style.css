@@ -1,6 +1,9 @@
 body {
   background-color: #555555;
 }
+body::selection {
+  color: grey;
+}
 nav {
   background-color: #443355;
   grid-area: nav;
@@ -10,8 +13,29 @@ main {
   grid-area: main;
 }
 aside {
-  background-color: #333;
+  background-color: black;
   grid-area: aside;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-evenly;
+}
+.shortcuts {
+}
+aside img {
+  filter: invert();
+  height: 25px;
+  width: 25px;
+  padding: 10px;
+}
+.logo {
+  display: none;
+}
+.settings {
+  display: none;
 }
 header {
   background-color: green;
@@ -36,6 +60,7 @@ footer {
   column-count: 2;
   font-family: arial;
   margin-top: 10px;
+  margin-bottom: 50px;
 }
 .rapper {
   break-inside: avoid;
@@ -91,5 +116,34 @@ footer {
 @media (min-width: 768px) {
   .pictures {
     column-count: 4;
+  }
+  .logo {
+    display: flex;
+  }
+  .settings {
+    display: flex;
+  }
+
+  aside {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    grid-area: aside;
+    position: static;
+    justify-content: start;
+  }
+  .grid-container {
+    display: grid;
+    gap: 0;
+    grid-template-columns: auto 95%;
+    grid-template-areas:
+      "aside header"
+      "aside nav"
+      "aside main";
+  }
+  aside img {
+    height: 30px;
+    width: 30px;
   }
 }
