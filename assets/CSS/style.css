@@ -14,7 +14,6 @@ main {
 }
 aside {
   background-color: black;
-  grid-area: aside;
   display: flex;
   flex-direction: row;
   position: fixed;
@@ -24,6 +23,15 @@ aside {
   justify-content: space-evenly;
 }
 .shortcuts {
+  background-color: black;
+  grid-area: aside;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-evenly;
 }
 aside img {
   filter: invert();
@@ -61,6 +69,8 @@ footer {
   font-family: arial;
   margin-top: 10px;
   margin-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .rapper {
   break-inside: avoid;
@@ -114,25 +124,6 @@ footer {
   left: 0;
 }
 @media (min-width: 768px) {
-  .pictures {
-    column-count: 4;
-  }
-  .logo {
-    display: flex;
-  }
-  .settings {
-    display: flex;
-  }
-
-  aside {
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    align-items: center;
-    grid-area: aside;
-    position: static;
-    justify-content: start;
-  }
   .grid-container {
     display: grid;
     gap: 0;
@@ -142,8 +133,41 @@ footer {
       "aside nav"
       "aside main";
   }
+  .pictures {
+    column-count: 4;
+  }
+  .logo {
+    display: flex;
+  }
+  .settings {
+    display: flex;
+    align-items: end;
+    position: relative;
+    top: 40vh;
+  }
+  .shortcuts {
+    flex-direction: column;
+    display: flex;
+    top: 0;
+    max-width: 5%;
+    align-items: center;
+    justify-content: start;
+    border-right: solid 1px;
+    border-color: white;
+  }
+  aside {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    grid-area: aside;
+    position: static;
+    justify-content: start;
+  }
+
   aside img {
     height: 30px;
     width: 30px;
+    margin: 10px 0;
   }
 }
