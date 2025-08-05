@@ -231,6 +231,21 @@
                 audio.currentTime = 0; // Reset to beginning
             }
         }
+
+        // Function to shuffle the rapper cards
+        function shuffleRappers() {
+            const picturesContainer = document.querySelector('.pictures');
+            const rapperCards = Array.from(picturesContainer.querySelectorAll('.rapper'));
+
+            // Fisher-Yates shuffle algorithm
+            for (let i = rapperCards.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                picturesContainer.appendChild(rapperCards[j]);
+            }
+        }
+
+        // Shuffle rappers when page loads
+        document.addEventListener('DOMContentLoaded', shuffleRappers);
     </script>
 </body>
 
